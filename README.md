@@ -25,11 +25,11 @@ UyaliBeautyFaceSDK是一个集美颜、美型、贴纸等各种功能于一体�
 
 |                             瘦脸                             |                             下巴                             |                             眼距                             |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| ![face_thin](/Users/sweet/Desktop/github/UyaliBeautyFaceSDK/gif/face_thin.gif) | ![chin](/Users/sweet/Desktop/github/UyaliBeautyFaceSDK/gif/chin.gif) | ![eye_distance](/Users/sweet/Desktop/github/UyaliBeautyFaceSDK/gif/eye_distance.gif) |
+| ![face_thin](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/gif/face_thin.gif) | ![chin](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/gif/chin.gif) | ![eye_distance](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/gif/eye_distance.gif) |
 
 |                             瘦鼻                             |                            眉间距                            |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| ![nose_thin](/Users/sweet/Desktop/github/UyaliBeautyFaceSDK/gif/nose_thin.gif) | ![eyebrow_distance](/Users/sweet/Desktop/github/UyaliBeautyFaceSDK/gif/eyebrow_distance.gif) |
+| ![nose_thin](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/gif/nose_thin.gif) | ![eye_distance](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/gif/eyebrow_distance.gif) |
 
 #### 美颜：
 
@@ -69,7 +69,7 @@ filter.faceThin_delta = 100 //瘦脸参数范围 0 - 100
 
 可进入**Build Phases**,点击左上角的**加号**，选择**New Copy Files Phase**,在点击创建的**Copy Files**，将**Destination**设为**Frameworks**，点击下方的**加号**，添加**UyaliBeautyFaceSDK.framework**即可
 
-![ios_bug](/Users/sweet/Desktop/github/UyaliBeautyFaceSDK/screenshot/ios_bug.png)
+![ios_bug](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/screenshot/ios_bug.png)
 
 #### Android接入
 
@@ -83,8 +83,8 @@ filter.faceThin_delta = 100 //瘦脸参数范围 0 - 100
 
 |            |             美颜渲染（小头、瘦脸、大眼、瘦鼻等）             |
 | :--------: | :----------------------------------------------------------: |
-|  **CPU**   | ![cpu](/Users/sweet/Desktop/github/UyaliBeautyFaceSDK/screenshot/cpu.png) |
-| **Memory** | ![memory](/Users/sweet/Desktop/github/UyaliBeautyFaceSDK/screenshot/memory.png) |
-| **Energy** | ![energy](/Users/sweet/Desktop/github/UyaliBeautyFaceSDK/screenshot/energy.png) |
-|  **GPU**   | ![gpu](/Users/sweet/Desktop/github/UyaliBeautyFaceSDK/screenshot/gpu.png) |
+|  **CPU**   | ![cpu](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/screenshot/cpu.png) |
+| **Memory** | ![memory](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/screenshot/memory.png) |
+| **Energy** | ![energy](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/screenshot/energy.png) |
+|  **GPU**   | ![gpu](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/screenshot/gpu.png) |
 
