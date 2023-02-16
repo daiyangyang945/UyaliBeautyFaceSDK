@@ -8,7 +8,7 @@ UyaliBeautyFaceSDK是一个集美颜、美型、贴纸等各种功能于一体�
 
 ## 功能规划
 
-- 美颜：美白、磨皮、亮眼、白牙等功能（未完成）
+- 美颜：美白、磨皮、亮眼、白牙等功能（完成**美白、磨皮**，剩余未完成）
 - 美型：小头、瘦脸、大眼、额头、颧骨、眉毛等脸部微调功能（**已完成19款美型滤镜**）
 - 贴纸：规划中（未完成）
 - 适配Android（未完成）
@@ -48,19 +48,25 @@ UyaliBeautyFaceSDK是一个集美颜、美型、贴纸等各种功能于一体�
 初始化：
 
 ```swift
-private let filter = UyaliBeautyFaceFilter()
+private let filter = UyaliBeautyFaceEngine()
 ```
 
 图像渲染处理：
 
 ```swift
-let outputPixelBuffer = filter.reshape(pixelBuffer: pixelBuffer!)
+filter.process(pixelBuffer: pixelBuffer!)
 ```
 
 美型参数设置：
 
 ```swift
 filter.faceThin_delta = 100 //瘦脸参数范围 0 - 100
+```
+
+美颜参数设置：
+
+```swift
+filter.white_delta = 100 //美白参数范围 0 - 100
 ```
 
 如果接入时，提示
@@ -76,6 +82,18 @@ filter.faceThin_delta = 100 //瘦脸参数范围 0 - 100
 待续...
 
 ## 更新日志
+
+#### 2023-02-16
+
+**本次更新：**
+
+1、修复美型时可能产生锯齿的bug
+
+2、完成美白磨皮功能（磨皮的内存消耗略多，后期待完善）
+
+3、在调用UyaliBeautyFaceSDK时直接在当前获取的CVPixelBuffer的内存中进行渲染，不再需要生成一个新的CVPixelBuffer用于后续处理，SDK插拔更方便
+
+
 
 #### 2023-01-30
 

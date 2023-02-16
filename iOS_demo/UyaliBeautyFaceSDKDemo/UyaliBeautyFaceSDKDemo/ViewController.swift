@@ -14,13 +14,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         let button1 = UIButton(frame: CGRect(x: view.bounds.width/2-50, y: view.bounds.height/2-100, width: 100, height: 50))
         view.addSubview(button1)
-        button1.setTitle("美型滤镜", for: .normal)
+        button1.setTitle("美颜滤镜", for: .normal)
         button1.setTitleColor(UIColor(named: "color_text"), for: .normal)
         button1.addTarget(self, action: #selector(buttonAction1), for: .touchUpInside)
     }
 
     @objc func buttonAction1() {
-        let controller = FaceReshapeController()
+        let controller = BeautyFilterController()
         controller.modalPresentationStyle = .fullScreen
         present(controller, animated: true)
     }

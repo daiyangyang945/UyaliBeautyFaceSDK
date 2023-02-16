@@ -10,7 +10,11 @@
 		</data>
 		<key>Headers/UyaliBeautyFace.h</key>
 		<data>
-		zYceC1dr7/5ii8/I3txTtuSQuPI=
+		gEn4UAWrg6heKTh7kzGs5piG6o0=
+		</data>
+		<key>Headers/UyaliBeautyFaceEngine.swift</key>
+		<data>
+		bHHmN+A8N5IgBJeRqXUN3KwT5+I=
 		</data>
 		<key>Headers/UyaliBeautyFaceSDK-Swift.h</key>
 		<data>
@@ -26,7 +30,7 @@
 		</data>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		ms3yrW9v5/tdIenLpKtfDzjuSzk=
+		P4AB3DgobarWBZR3Cl10AvcGfMo=
 		</data>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -34,11 +38,11 @@
 		</data>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		XfNU16YOjmPnpeQYczXP3l5EkHc=
+		NqoKR2XTqTI2LbhP2N6Z8KE2vhk=
 		</data>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		xCRthjCTVMwaQpy19vP5hQOQhNM=
+		8+7dyw1AYtijkOmfVZuEru3zEes=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -110,7 +114,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Iiu31eHv5ozRTWC10tajXXzMtJkjLYj8iErv5JV/nXU=
+			oijcjVWMjB6733MX7123O8vBYdspv0n7L5OtX0qa+jE=
+			</data>
+		</dict>
+		<key>Headers/UyaliBeautyFaceEngine.swift</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lzovW5QEk7NqebNvE9vcyWwo9ZnrNN9HRQwjW/dayF0=
 			</data>
 		</dict>
 		<key>Headers/UyaliBeautyFaceSDK-Swift.h</key>
@@ -131,7 +142,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kaGkpMlp+0Q1fRN+GcVEwabZjt0QbZHTrQ1uVoHsfEM=
+			M1d4SGGYkpzWeKG7kY402AOEtCfhKqekQbxMxT/pEEU=
 			</data>
 		</dict>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -145,14 +156,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qXL6Zp4tK/vbM7wB5wWq/Rt5vQZIKpYM4uyarlyG03c=
+			tVN8sz8qbZLpOT7ywf5BQx6ygXlheBmxAOwTergIf44=
 			</data>
 		</dict>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qqz/A6IZWdgKlEoTpUMEMlQqnMV/vHXf98NTBNkOurE=
+			cvIpvr2ccq0tqrXp5cfFyWUNchnqBFMt1kltnijVXr4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

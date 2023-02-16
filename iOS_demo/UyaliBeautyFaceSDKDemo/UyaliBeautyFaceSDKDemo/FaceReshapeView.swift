@@ -9,7 +9,7 @@ import UIKit
 
 @objc protocol FaceReshapeDelegate: NSObjectProtocol {
     func changeReshapeType(type: Int)
-    func getDeltaValue(value:Float, type:Int)
+    func getReshapeDeltaValue(value:Float, type:Int)
 }
 
 class FaceReshapeView: UIView {
@@ -175,7 +175,7 @@ class FaceReshapeView: UIView {
     @objc func sliderValueChanged(currentSlider: UISlider) {
         valueLabel.text = String(format: "%.1f", currentSlider.value)
         if delegate != nil {
-            delegate.getDeltaValue(value: slider.value, type: currentTag)
+            delegate.getReshapeDeltaValue(value: slider.value, type: currentTag)
         }
     }
 }
