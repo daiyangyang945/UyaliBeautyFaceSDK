@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		nu87P6QUfi1CsawinTAvA02xW6E=
+		</data>
 		<key>Headers/FaceLandmarks.h</key>
 		<data>
 		h3nJP4hSOUNqJ4MNnNFmJRI7s+k=
@@ -28,9 +32,17 @@
 		<data>
 		2m4Pu1l7d3yBzo40i9xqjjVhVDs=
 		</data>
+		<key>Modules/.DS_Store</key>
+		<data>
+		5ZXUxQ595AWXwhTxHAhx1WI9bQ4=
+		</data>
+		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/.DS_Store</key>
+		<data>
+		i4xoMXxPwyDBFQKntgBTSfJnfpI=
+		</data>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		P4AB3DgobarWBZR3Cl10AvcGfMo=
+		t+yV4bUa9iCcypdcI89S+4FKlDg=
 		</data>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -38,11 +50,11 @@
 		</data>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		NqoKR2XTqTI2LbhP2N6Z8KE2vhk=
+		AiTQKdseK67gQRtVvorUCc8goWc=
 		</data>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		8+7dyw1AYtijkOmfVZuEru3zEes=
+		VcZ4k5E6nvs+0wJ2LxaCcZ0gXAM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -142,7 +154,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			M1d4SGGYkpzWeKG7kY402AOEtCfhKqekQbxMxT/pEEU=
+			Octnz40q3QalkoCVX2VFwNrR1ckrmhn9xgAA330TMo0=
 			</data>
 		</dict>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -156,14 +168,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tVN8sz8qbZLpOT7ywf5BQx6ygXlheBmxAOwTergIf44=
+			nRlSRL2NsasLed9Mc7M8X10bH+iG9w9Z+CZhRXVBO3s=
 			</data>
 		</dict>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cvIpvr2ccq0tqrXp5cfFyWUNchnqBFMt1kltnijVXr4=
+			WF5lZVwnIerT4kOgyo2xJbvT7TLYhJKtmaq0Xo2BMUY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

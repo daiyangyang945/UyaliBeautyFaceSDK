@@ -19,10 +19,10 @@
 		F37AE6E02987C75300F3311C /* FaceReshapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37AE6D92987C75300F3311C /* FaceReshapeView.swift */; };
 		F37AE6E12987C75300F3311C /* PFOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37AE6DB2987C75300F3311C /* PFOpenGLView.m */; };
 		F37AE6E22987C75300F3311C /* PFCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = F37AE6DD2987C75300F3311C /* PFCamera.m */; };
-		F38408B6299E18A100697547 /* UyaliBeautyFaceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38408B5299E18A100697547 /* UyaliBeautyFaceSDK.framework */; };
 		F38408B9299E18D000697547 /* FaceBeautyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38408B7299E18D000697547 /* FaceBeautyView.swift */; };
 		F38408BA299E18D000697547 /* BeautyFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38408B8299E18D000697547 /* BeautyFilterController.swift */; };
-		F38408BB299E197C00697547 /* UyaliBeautyFaceSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F38408B5299E18A100697547 /* UyaliBeautyFaceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F38408CA29A5DBCF00697547 /* UyaliBeautyFaceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38408C929A5DBCF00697547 /* UyaliBeautyFaceSDK.framework */; };
+		F38408CB29A5DBD800697547 /* UyaliBeautyFaceSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F38408C929A5DBCF00697547 /* UyaliBeautyFaceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F38408BB299E197C00697547 /* UyaliBeautyFaceSDK.framework in CopyFiles */,
+				F38408CB29A5DBD800697547 /* UyaliBeautyFaceSDK.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +75,9 @@
 		F37AE6DD2987C75300F3311C /* PFCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFCamera.m; sourceTree = "<group>"; };
 		F37AE6DE2987C75300F3311C /* PFOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFOpenGLView.h; sourceTree = "<group>"; };
 		F37AE6E62987C7C000F3311C /* UyaliBeautyFaceSDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UyaliBeautyFaceSDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		F38408B5299E18A100697547 /* UyaliBeautyFaceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UyaliBeautyFaceSDK.framework; sourceTree = "<group>"; };
 		F38408B7299E18D000697547 /* FaceBeautyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceBeautyView.swift; sourceTree = "<group>"; };
 		F38408B8299E18D000697547 /* BeautyFilterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyFilterController.swift; sourceTree = "<group>"; };
+		F38408C929A5DBCF00697547 /* UyaliBeautyFaceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UyaliBeautyFaceSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F38408B6299E18A100697547 /* UyaliBeautyFaceSDK.framework in Frameworks */,
+				F38408CA29A5DBCF00697547 /* UyaliBeautyFaceSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +129,7 @@
 		F37AE6A42987C6B100F3311C /* UyaliBeautyFaceSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F38408B5299E18A100697547 /* UyaliBeautyFaceSDK.framework */,
+				F38408C929A5DBCF00697547 /* UyaliBeautyFaceSDK.framework */,
 				F37AE6A52987C6B100F3311C /* AppDelegate.swift */,
 				F37AE6A72987C6B100F3311C /* SceneDelegate.swift */,
 				F37AE6A92987C6B100F3311C /* ViewController.swift */,
