@@ -163,6 +163,20 @@ public class UyaliBeautyFaceEngine {
         }
     }
     
+    ///亮眼，参数范围：0.0 - 100.0
+    @objc public var eyeBright_delta: Float = 0.0 {
+        didSet {
+            processor.eyeBright_delta = eyeBright_delta
+        }
+    }
+    
+    ///白牙，参数范围： 0.0 - 100.0
+    @objc public var teethBright_delta: Float = 0.0 {
+        didSet {
+            processor.teethBright_delta = teethBright_delta
+        }
+    }
+    
     @objc public init() {}
     
     //MARK: CVPixelBuffer处理（当前仅支持RGBA格式）

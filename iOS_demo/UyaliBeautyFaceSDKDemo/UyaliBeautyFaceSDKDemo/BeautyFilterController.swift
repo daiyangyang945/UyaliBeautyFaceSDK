@@ -267,6 +267,10 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
             beautyView.slider.value = filter.white_delta
         } else if type == 101 {//磨皮 参数范围 0 - 100
             beautyView.slider.value = filter.skin_delta
+        } else if type == 102 {//亮眼 参数范围 0 - 100
+            beautyView.slider.value = filter.eyeBright_delta
+        } else if type == 103 {//白牙 参数范围 0 - 100
+            beautyView.slider.value = filter.teethBright_delta
         }
         beautyView.valueLabel.text = String(format: "%.1f", beautyView.slider.value)
     }
@@ -276,6 +280,10 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
             filter.white_delta = value
         } else if type == 101 {//磨皮 参数范围 0 - 100
             filter.skin_delta = value
+        } else if type == 102 {//亮眼 参数范围 0 - 100
+            filter.eyeBright_delta = value
+        } else if type == 103 {//白牙 参数范围 0 - 100
+            filter.teethBright_delta = value
         }
     }
     

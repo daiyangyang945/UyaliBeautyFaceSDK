@@ -21,7 +21,9 @@ class FaceBeautyView: UIView {
     
     private let beautyItems: [[String: String]] = [
         ["image": "beauty_skin_white", "name": "美白"],
-        ["image": "beauty_skin_abrade", "name": "磨皮"]
+        ["image": "beauty_skin_abrade", "name": "磨皮"],
+        ["image": "beauty_bright_eye", "name": "亮眼"],
+        ["image": "beauty_bright_teeth", "name": "白牙"]
     ]
     
     private var currentTag: Int = 100 {
@@ -37,6 +39,12 @@ class FaceBeautyView: UIView {
                     slider.minimumValue = 0
                     slider.maximumValue = 100
                 } else if currentTag == 101 {//磨皮 done 0 - 100
+                    slider.minimumValue = 0
+                    slider.maximumValue = 100
+                } else if currentTag == 102 {//亮眼 done 0 - 100
+                    slider.minimumValue = 0
+                    slider.maximumValue = 100
+                } else if currentTag == 103 {//白牙 done 0 - 100
                     slider.minimumValue = 0
                     slider.maximumValue = 100
                 }
