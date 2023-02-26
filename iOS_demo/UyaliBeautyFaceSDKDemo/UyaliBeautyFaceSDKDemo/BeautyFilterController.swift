@@ -144,19 +144,19 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
             button.tag = 1000+i
         }
         
-        //Reshape View
-        reshapeView = FaceReshapeView(frame: CGRect(x: 0, y: beautyFilterView.frame.origin.y, width: kScreenWidth, height: 130.0))
-        view.addSubview(reshapeView)
-        reshapeView.alpha = 0
-        reshapeView.isHidden = true
-        reshapeView.delegate = self
-        
-        //Beauty View
-        beautyView = FaceBeautyView(frame: reshapeView.frame)
+        //美颜滤镜
+        beautyView = FaceBeautyView(frame: CGRect(x: 0, y: beautyFilterView.frame.origin.y, width: kScreenWidth, height: 130.0))
         view.addSubview(beautyView)
         beautyView.alpha = 0
         beautyView.isHidden = true
         beautyView.delegate = self
+        
+        //美型滤镜
+        reshapeView = FaceReshapeView(frame: beautyView.frame)
+        view.addSubview(reshapeView)
+        reshapeView.alpha = 0
+        reshapeView.isHidden = true
+        reshapeView.delegate = self
         
         let line = UIView(frame: CGRect(x: 0, y: kScreenHeight-50.0-bottomHeight, width: kScreenWidth, height: 1.0))
         view.addSubview(line)
@@ -172,6 +172,34 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
         //
         filter.process(pixelBuffer: pixelBuffer!)
         openGLView.display(pixelBuffer)
+    }
+    
+    //MARK: Beauty Delegate
+    //在切换滤镜时，将当前滤镜的参数赋值给Slider
+    func changeBeautyType(type: Int) {
+        if type == 100 {//美白 参数范围：0 - 100
+            beautyView.slider.value = filter.white_delta
+        } else if type == 101 {//磨皮 参数范围 0 - 100
+            beautyView.slider.value = filter.skin_delta
+        } else if type == 102 {//亮眼 参数范围 0 - 100
+            beautyView.slider.value = filter.eyeBright_delta
+        } else if type == 103 {//白牙 参数范围 0 - 100
+            beautyView.slider.value = filter.teethBright_delta
+        }
+        beautyView.valueLabel.text = String(format: "%.1f", beautyView.slider.value)
+    }
+    
+    //将slider的value作为参数赋值给对应的滤镜
+    func getBeautyDeltaValue(value: Float, type: Int) {
+        if type == 100 {//美白 参数范围：0 - 100
+            filter.white_delta = value
+        } else if type == 101 {//磨皮 参数范围 0 - 100
+            filter.skin_delta = value
+        } else if type == 102 {//亮眼 参数范围 0 - 100
+            filter.eyeBright_delta = value
+        } else if type == 103 {//白牙 参数范围 0 - 100
+            filter.teethBright_delta = value
+        }
     }
     
     //MARK: Reshape Delegate
@@ -219,6 +247,7 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
         reshapeView.valueLabel.text = String(format: "%.1f", reshapeView.slider.value)
     }
     
+    //将slider的value作为参数赋值给对应的滤镜
     func getReshapeDeltaValue(value: Float, type: Int) {
         if type == 100 {//小头 参数范围：0 - 100
             filter.headReduce_delta = value
@@ -258,32 +287,6 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
             filter.eyebrowThin_delta = value
         } else if type == 118 {//嘴型 参数范围：-50 - 50
             filter.mouth_delta = value
-        }
-    }
-    
-    //MARK: Beauty Delegate
-    func changeBeautyType(type: Int) {
-        if type == 100 {//美白 参数范围：0 - 100
-            beautyView.slider.value = filter.white_delta
-        } else if type == 101 {//磨皮 参数范围 0 - 100
-            beautyView.slider.value = filter.skin_delta
-        } else if type == 102 {//亮眼 参数范围 0 - 100
-            beautyView.slider.value = filter.eyeBright_delta
-        } else if type == 103 {//白牙 参数范围 0 - 100
-            beautyView.slider.value = filter.teethBright_delta
-        }
-        beautyView.valueLabel.text = String(format: "%.1f", beautyView.slider.value)
-    }
-    
-    func getBeautyDeltaValue(value: Float, type: Int) {
-        if type == 100 {//美白 参数范围：0 - 100
-            filter.white_delta = value
-        } else if type == 101 {//磨皮 参数范围 0 - 100
-            filter.skin_delta = value
-        } else if type == 102 {//亮眼 参数范围 0 - 100
-            filter.eyeBright_delta = value
-        } else if type == 103 {//白牙 参数范围 0 - 100
-            filter.teethBright_delta = value
         }
     }
     
