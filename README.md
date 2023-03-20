@@ -12,12 +12,15 @@ UyaliBeautyFaceSDK是一个集美颜、美型、贴纸等各种功能于一体�
 
 - 美颜：美白、磨皮、亮眼、白牙等功能（**完成美白、磨皮、亮眼、白牙等滤镜**）
 - 美型：小头、瘦脸、大眼、额头、颧骨、眉毛等脸部微调功能（**已完成19款美型滤镜**）
+- 美妆：眉毛、眼妆、美瞳、腮红、口红等（**已初步完成规划中所有的美妆滤镜**）
 - 贴纸：规划中（未完成）
 - 适配Android（未完成）
 
 ## 关于人脸关键点检测
 
 初期采用的是Face++的SDK，由于使用次数有限，现在采用了腾讯开源的TNN，缺点是只能识别一张人脸，但是目前用于自研调试是足够了，待完成大部分功能后再考虑替换。
+
+**注意：**由于开源人脸识别的关键点存在一定的抖动，所以在精细计算的美妆：**美瞳滤镜**中也存在一定的抖动
 
 ## 部分功能展示
 
@@ -33,9 +36,13 @@ UyaliBeautyFaceSDK是一个集美颜、美型、贴纸等各种功能于一体�
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | ![nose_thin](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/gif/nose_thin.gif) | ![eye_distance](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/gif/eyebrow_distance.gif) |
 
-#### 美颜：
+#### 美妆：
 
-待续...
+|                          美妆：眉毛                          |                          美妆：口红                          |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| ![makeup_eyebrow](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/gif/makeup_eyebrow.gif) | ![makeup_rouge](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/gif/makeup_rouge.gif) |
+
+
 
 #### 贴纸：
 
@@ -71,6 +78,14 @@ filter.faceThin_delta = 100 //瘦脸参数范围 0 - 100
 filter.white_delta = 100 //美白参数范围 0 - 100
 ```
 
+美妆参数设置：
+
+```swift
+//美妆滤镜需要设置两个参数，第一个为美妆数值，第二个为美妆样式
+filter.makeup_eyebrow_delta = 100 // 美妆：眉毛参数范围 0 - 100
+filter.makeup_eyebrow_type = .eyebrow_cupin //将眉毛的样式设置为蹙颦眉
+```
+
 如果接入时，提示
 
 > Library not loaded: @rpath/UyaliBeautyFaceSDK.framework/UyaliBeautyFaceSDK
@@ -84,6 +99,20 @@ filter.white_delta = 100 //美白参数范围 0 - 100
 待续...
 
 ## 更新日志
+
+#### 2023-03-21
+
+**本次更新：**
+
+1、完成美妆滤镜（眉毛、眼妆、美瞳、腮红、口红）
+
+2、增加部分演示动画
+
+
+
+
+
+
 
 #### 2023-02-27
 

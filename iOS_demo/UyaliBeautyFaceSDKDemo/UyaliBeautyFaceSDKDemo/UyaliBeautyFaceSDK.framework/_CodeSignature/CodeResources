@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		ZdXux/v7GPyV+HI9TQ4u6BjEwbM=
+		</data>
 		<key>Headers/FaceLandmarks.h</key>
 		<data>
 		h3nJP4hSOUNqJ4MNnNFmJRI7s+k=
@@ -14,11 +18,11 @@
 		</data>
 		<key>Headers/UyaliBeautyFaceEngine.swift</key>
 		<data>
-		yFcdoKDJ4emWZeJ9UePNFXlC7pQ=
+		RIxxVpsFFL87a3YpvbOvirumAxg=
 		</data>
 		<key>Headers/UyaliBeautyFaceSDK-Swift.h</key>
 		<data>
-		0b6vt8MpvclbbpJjX35YmAdJTcQ=
+		CiHcNH3RY7BBA0uc4CqFIe8qm2s=
 		</data>
 		<key>Headers/UyaliBeautyFaceSDK.h</key>
 		<data>
@@ -30,7 +34,7 @@
 		</data>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		T6z0XgPsHXJqC804SZ+sv1GOaYo=
+		Y6pb3YFkgDsKP+Rv7BifnHm99ag=
 		</data>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -38,11 +42,11 @@
 		</data>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		riYIFJ0uSLwU0KQNA45NwLnQwYE=
+		ClAd5dC4r2DUsrqY0bCLxf0Qnoo=
 		</data>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		Xnn5r6hM0ozE3Mj/wZzSzMHXDkc=
+		YvJN2Mn8r9CnG91000XPi5PZpHc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -121,14 +125,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			l/KcMrBDynFsreibHywM6ktc2k4gBCRVGHgj30ZUEkE=
+			fa+CfgcvrWeFr12u8bfN5558Mvwt0vSje1iMOhq93mo=
 			</data>
 		</dict>
 		<key>Headers/UyaliBeautyFaceSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HqZb4AFb01COVBa+D0sbYU1KPSeaZYmsT3X2f+mKri4=
+			mO7qWkLRZDe6lxaMEflR0PoMBlWH4C9jGUpYJ6bXBcw=
 			</data>
 		</dict>
 		<key>Headers/UyaliBeautyFaceSDK.h</key>
@@ -142,7 +146,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bHNSUDVvoBwoWaVBKRzkfWed1sRhh2ubPQOONKzDWA4=
+			k2tjZU137fXxqME69TQt0aPioDnDbyx5me46wT8rh8A=
 			</data>
 		</dict>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -156,14 +160,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mFlXoSIS5d4QfL3NXIcjJ8Jzpwrrp+OZdfurNgGgHE0=
+			GrKk8V9RNog3H8X6tBKGNIy1oVHWSpMjGs+bOtY7J34=
 			</data>
 		</dict>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iMaXwiNX2Rvns2OztGnqbgCktgZudWkSxzPCwhMDKzQ=
+			dPY3aI3+L3P4Fl4uNPsBwDIEC7gGeE+y6WSyD46RJCY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

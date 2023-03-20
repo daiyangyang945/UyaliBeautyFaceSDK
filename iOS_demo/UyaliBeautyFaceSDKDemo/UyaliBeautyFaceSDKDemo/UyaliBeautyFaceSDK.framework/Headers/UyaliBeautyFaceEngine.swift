@@ -177,6 +177,72 @@ public class UyaliBeautyFaceEngine: NSObject {
         }
     }
     
+    //MARK: 美妆参数
+    ///眉毛，参数范围：0.0 - 100.0
+    @objc public var makeup_eyebrow_delta: Float = 0.0 {
+        didSet {
+            processor.makeup_eyebrow_delta = makeup_eyebrow_delta
+        }
+    }
+    ///眉毛类型
+    @objc public var makeup_eyebrow_type: MakeupEyebrowType = .eyebrow_none {
+        didSet {
+            processor.makeup_eyebrow_type = makeup_eyebrow_type
+        }
+    }
+    
+    ///眼妆，参数范围： 0.0 - 100.0
+    @objc public var makeup_eyeshadow_delta: Float = 0.0 {
+        didSet {
+            processor.makeup_eyeshadow_delta = makeup_eyeshadow_delta
+        }
+    }
+    ///眼妆类型
+    @objc public var makeup_eyeshadow_type: MakeupEyeshadowType = .eyeshadow_none {
+        didSet {
+            processor.makeup_eyeshadow_type = makeup_eyeshadow_type
+        }
+    }
+    
+    ///美瞳，参数范围：0.0 - 100.0
+    @objc public var makeup_pupil_delta: Float = 0.0 {
+        didSet {
+            processor.makeup_pupil_delta = makeup_pupil_delta
+        }
+    }
+    ///美瞳类型
+    @objc public var makeup_pupil_type: MakeupPupilType = .pupil_none {
+        didSet {
+            processor.makeup_pupil_type = makeup_pupil_type
+        }
+    }
+    
+    ///腮红，参数范围：0.0 - 100.0
+    @objc public var makeup_blush_delta: Float = 0.0 {
+        didSet {
+            processor.makeup_blush_delta = makeup_blush_delta
+        }
+    }
+    ///腮红类型
+    @objc public var makeup_blush_type: MakeupBlushType = .blush_none {
+        didSet {
+            processor.makeup_blush_type = makeup_blush_type
+        }
+    }
+    
+    ///口红，参数范围：0.0 - 100.0
+    @objc public var makeup_rouge_delta: Float = 0.0 {
+        didSet {
+            processor.makeup_rouge_delta = makeup_rouge_delta
+        }
+    }
+    ///口红类型
+    @objc public var makeup_rouge_type: MakeupRougeType = .rouge_none {
+        didSet {
+            processor.makeup_rouge_type = makeup_rouge_type
+        }
+    }
+    
     @objc public override init() {}
     
     //MARK: CVPixelBuffer处理（当前仅支持RGBA格式）

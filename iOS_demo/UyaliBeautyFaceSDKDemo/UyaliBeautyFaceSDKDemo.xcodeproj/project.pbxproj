@@ -20,9 +20,12 @@
 		F37AE6E12987C75300F3311C /* PFOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37AE6DB2987C75300F3311C /* PFOpenGLView.m */; };
 		F37AE6E22987C75300F3311C /* PFCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = F37AE6DD2987C75300F3311C /* PFCamera.m */; };
 		F38408B9299E18D000697547 /* FaceBeautyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38408B7299E18D000697547 /* FaceBeautyView.swift */; };
-		F38408BA299E18D000697547 /* BeautyFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38408B8299E18D000697547 /* BeautyFilterController.swift */; };
-		F39C3F6529ABC90900C8B236 /* UyaliBeautyFaceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F39C3F6429ABC90900C8B236 /* UyaliBeautyFaceSDK.framework */; };
-		F39C3F6729ABC92600C8B236 /* UyaliBeautyFaceSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F39C3F6429ABC90900C8B236 /* UyaliBeautyFaceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3977BA029C8B83C003053ED /* UyaliBeautyFaceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3977B9F29C8B83C003053ED /* UyaliBeautyFaceSDK.framework */; };
+		F3977BA129C8B849003053ED /* UyaliBeautyFaceSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F3977B9F29C8B83C003053ED /* UyaliBeautyFaceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3977BA529C8B877003053ED /* FaceMakeupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3977BA229C8B877003053ED /* FaceMakeupView.swift */; };
+		F3977BA629C8B877003053ED /* MakeupItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3977BA329C8B877003053ED /* MakeupItems.swift */; };
+		F3977BA729C8B877003053ED /* DYYExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3977BA429C8B877003053ED /* DYYExtension.swift */; };
+		F3977BA929C8B890003053ED /* BeautyFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3977BA829C8B890003053ED /* BeautyFilterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +52,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F39C3F6729ABC92600C8B236 /* UyaliBeautyFaceSDK.framework in CopyFiles */,
+				F3977BA129C8B849003053ED /* UyaliBeautyFaceSDK.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +79,11 @@
 		F37AE6DE2987C75300F3311C /* PFOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFOpenGLView.h; sourceTree = "<group>"; };
 		F37AE6E62987C7C000F3311C /* UyaliBeautyFaceSDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UyaliBeautyFaceSDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		F38408B7299E18D000697547 /* FaceBeautyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceBeautyView.swift; sourceTree = "<group>"; };
-		F38408B8299E18D000697547 /* BeautyFilterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyFilterController.swift; sourceTree = "<group>"; };
-		F39C3F6429ABC90900C8B236 /* UyaliBeautyFaceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UyaliBeautyFaceSDK.framework; sourceTree = "<group>"; };
+		F3977B9F29C8B83C003053ED /* UyaliBeautyFaceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UyaliBeautyFaceSDK.framework; sourceTree = "<group>"; };
+		F3977BA229C8B877003053ED /* FaceMakeupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceMakeupView.swift; sourceTree = "<group>"; };
+		F3977BA329C8B877003053ED /* MakeupItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeupItems.swift; sourceTree = "<group>"; };
+		F3977BA429C8B877003053ED /* DYYExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYYExtension.swift; sourceTree = "<group>"; };
+		F3977BA829C8B890003053ED /* BeautyFilterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyFilterController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F39C3F6529ABC90900C8B236 /* UyaliBeautyFaceSDK.framework in Frameworks */,
+				F3977BA029C8B83C003053ED /* UyaliBeautyFaceSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,13 +135,16 @@
 		F37AE6A42987C6B100F3311C /* UyaliBeautyFaceSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F39C3F6429ABC90900C8B236 /* UyaliBeautyFaceSDK.framework */,
+				F3977B9F29C8B83C003053ED /* UyaliBeautyFaceSDK.framework */,
 				F37AE6A52987C6B100F3311C /* AppDelegate.swift */,
 				F37AE6A72987C6B100F3311C /* SceneDelegate.swift */,
 				F37AE6A92987C6B100F3311C /* ViewController.swift */,
-				F38408B8299E18D000697547 /* BeautyFilterController.swift */,
+				F3977BA829C8B890003053ED /* BeautyFilterController.swift */,
 				F38408B7299E18D000697547 /* FaceBeautyView.swift */,
 				F37AE6D92987C75300F3311C /* FaceReshapeView.swift */,
+				F3977BA429C8B877003053ED /* DYYExtension.swift */,
+				F3977BA229C8B877003053ED /* FaceMakeupView.swift */,
+				F3977BA329C8B877003053ED /* MakeupItems.swift */,
 				F37AE6E62987C7C000F3311C /* UyaliBeautyFaceSDKDemo-Bridging-Header.h */,
 				F37AE6DA2987C75300F3311C /* 相机 */,
 				F37AE6AB2987C6B100F3311C /* Main.storyboard */,
@@ -307,9 +316,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F37AE6E22987C75300F3311C /* PFCamera.m in Sources */,
+				F3977BA629C8B877003053ED /* MakeupItems.swift in Sources */,
 				F38408B9299E18D000697547 /* FaceBeautyView.swift in Sources */,
+				F3977BA929C8B890003053ED /* BeautyFilterController.swift in Sources */,
+				F3977BA729C8B877003053ED /* DYYExtension.swift in Sources */,
+				F3977BA529C8B877003053ED /* FaceMakeupView.swift in Sources */,
 				F37AE6E02987C75300F3311C /* FaceReshapeView.swift in Sources */,
-				F38408BA299E18D000697547 /* BeautyFilterController.swift in Sources */,
 				F37AE6AA2987C6B100F3311C /* ViewController.swift in Sources */,
 				F37AE6A62987C6B100F3311C /* AppDelegate.swift in Sources */,
 				F37AE6A82987C6B100F3311C /* SceneDelegate.swift in Sources */,

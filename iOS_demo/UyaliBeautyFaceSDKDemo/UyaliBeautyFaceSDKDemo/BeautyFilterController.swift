@@ -21,8 +21,7 @@ public func kIsIpnoneX() -> Bool {
     }
 }
 
-class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDelegate,FaceBeautyDelegate {
-    
+class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDelegate,FaceBeautyDelegate,FaceMakeupDelegate {
     
     private var camera: PFCamera!
     private var openGLView: PFOpenGLView!
@@ -30,6 +29,7 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
     private var beautyFilterView : UIView!
     private var reshapeView : FaceReshapeView!
     private var beautyView: FaceBeautyView!
+    private var makeupView: FaceMakeupView!
     
     private let filter = UyaliBeautyFaceEngine()
     
@@ -49,6 +49,12 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
                         reshapeView.frame = CGRect(x: 0, y: reshapeView.frame.origin.y-reshapeView.frame.height, width: reshapeView.frame.width, height: reshapeView.frame.height)
                         reshapeView.alpha = 1
                     }
+                } else if currentShow == 1002 {//美妆
+                    makeupView.isHidden = false
+                    UIView.animate(withDuration: 0.15) {[self] in
+                        makeupView.frame = CGRect(x: 0, y: makeupView.frame.origin.y-makeupView.frame.height, width: makeupView.frame.width, height: makeupView.frame.height)
+                        makeupView.alpha = 1
+                    }
                 }
             } else if oldValue == currentShow {//当选择了当前展示的滤镜集合时，只需要弹回即可
                 if currentShow == 1000 {//美颜
@@ -64,6 +70,13 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
                         reshapeView.alpha = 0
                     } completion: {[self] finished in
                         reshapeView.isHidden = true
+                    }
+                } else if currentShow == 1002 {//美妆
+                    UIView.animate(withDuration: 0.15) {[self] in
+                        makeupView.frame = CGRect(x: 0, y: beautyFilterView.frame.origin.y, width: makeupView.frame.width, height: makeupView.frame.height)
+                        makeupView.alpha = 0
+                    } completion: {[self] finished in
+                        makeupView.isHidden = true
                     }
                 }
                 currentShow = 0
@@ -81,6 +94,12 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
                         reshapeView.frame = CGRect(x: 0, y: reshapeView.frame.origin.y-reshapeView.frame.height, width: reshapeView.frame.width, height: reshapeView.frame.height)
                         reshapeView.alpha = 1
                     }
+                } else if currentShow == 1002 {//美妆
+                    makeupView.isHidden = false
+                    UIView.animate(withDuration: 0.15) {[self] in
+                        makeupView.frame = CGRect(x: 0, y: makeupView.frame.origin.y-makeupView.frame.height, width: makeupView.frame.width, height: makeupView.frame.height)
+                        makeupView.alpha = 1
+                    }
                 }
                 //弹回
                 if oldValue == 1000 {//美颜
@@ -96,6 +115,13 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
                         reshapeView.alpha = 0
                     } completion: {[self] finished in
                         reshapeView.isHidden = true
+                    }
+                } else if oldValue == 1002 {//美型
+                    UIView.animate(withDuration: 0.15) {[self] in
+                        makeupView.frame = CGRect(x: 0, y: beautyFilterView.frame.origin.y, width: makeupView.frame.width, height: makeupView.frame.height)
+                        makeupView.alpha = 0
+                    } completion: {[self] finished in
+                        makeupView.isHidden = true
                     }
                 }
             }
@@ -134,7 +160,7 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
         view.addSubview(beautyFilterView)
         beautyFilterView.backgroundColor = .black.withAlphaComponent(0.4)
         
-        let items = ["美颜","美型"]
+        let items = ["美颜","美型","美妆"]
         for i in 0..<items.count {
             let button = UIButton(frame: CGRect(x: kScreenWidth/CGFloat(items.count)*CGFloat(i), y: 0, width: kScreenWidth/CGFloat(items.count), height: 50.0))
             beautyFilterView.addSubview(button)
@@ -144,19 +170,25 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
             button.tag = 1000+i
         }
         
-        //美颜滤镜
-        beautyView = FaceBeautyView(frame: CGRect(x: 0, y: beautyFilterView.frame.origin.y, width: kScreenWidth, height: 130.0))
+        //Reshape View
+        reshapeView = FaceReshapeView(frame: CGRect(x: 0, y: beautyFilterView.frame.origin.y, width: kScreenWidth, height: 130.0))
+        view.addSubview(reshapeView)
+        reshapeView.alpha = 0
+        reshapeView.isHidden = true
+        reshapeView.delegate = self
+        
+        //Beauty View
+        beautyView = FaceBeautyView(frame: reshapeView.frame)
         view.addSubview(beautyView)
         beautyView.alpha = 0
         beautyView.isHidden = true
         beautyView.delegate = self
         
-        //美型滤镜
-        reshapeView = FaceReshapeView(frame: beautyView.frame)
-        view.addSubview(reshapeView)
-        reshapeView.alpha = 0
-        reshapeView.isHidden = true
-        reshapeView.delegate = self
+        makeupView = FaceMakeupView(frame: reshapeView.frame)
+        view.addSubview(makeupView)
+        makeupView.alpha = 0
+        makeupView.isHidden = true
+        makeupView.delegate = self
         
         let line = UIView(frame: CGRect(x: 0, y: kScreenHeight-50.0-bottomHeight, width: kScreenWidth, height: 1.0))
         view.addSubview(line)
@@ -169,37 +201,8 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
         if pixelBuffer == nil {
             return
         }
-        //
         filter.process(pixelBuffer: pixelBuffer!)
         openGLView.display(pixelBuffer)
-    }
-    
-    //MARK: Beauty Delegate
-    //在切换滤镜时，将当前滤镜的参数赋值给Slider
-    func changeBeautyType(type: Int) {
-        if type == 100 {//美白 参数范围：0 - 100
-            beautyView.slider.value = filter.white_delta
-        } else if type == 101 {//磨皮 参数范围 0 - 100
-            beautyView.slider.value = filter.skin_delta
-        } else if type == 102 {//亮眼 参数范围 0 - 100
-            beautyView.slider.value = filter.eyeBright_delta
-        } else if type == 103 {//白牙 参数范围 0 - 100
-            beautyView.slider.value = filter.teethBright_delta
-        }
-        beautyView.valueLabel.text = String(format: "%.1f", beautyView.slider.value)
-    }
-    
-    //将slider的value作为参数赋值给对应的滤镜
-    func getBeautyDeltaValue(value: Float, type: Int) {
-        if type == 100 {//美白 参数范围：0 - 100
-            filter.white_delta = value
-        } else if type == 101 {//磨皮 参数范围 0 - 100
-            filter.skin_delta = value
-        } else if type == 102 {//亮眼 参数范围 0 - 100
-            filter.eyeBright_delta = value
-        } else if type == 103 {//白牙 参数范围 0 - 100
-            filter.teethBright_delta = value
-        }
     }
     
     //MARK: Reshape Delegate
@@ -247,7 +250,6 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
         reshapeView.valueLabel.text = String(format: "%.1f", reshapeView.slider.value)
     }
     
-    //将slider的value作为参数赋值给对应的滤镜
     func getReshapeDeltaValue(value: Float, type: Int) {
         if type == 100 {//小头 参数范围：0 - 100
             filter.headReduce_delta = value
@@ -290,6 +292,88 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
         }
     }
     
+    //MARK: Beauty Delegate
+    func changeBeautyType(type: Int) {
+        if type == 100 {//美白 参数范围：0 - 100
+            beautyView.slider.value = filter.white_delta
+        } else if type == 101 {//磨皮 参数范围 0 - 100
+            beautyView.slider.value = filter.skin_delta
+        } else if type == 102 {//亮眼 参数范围 0 - 100
+            beautyView.slider.value = filter.eyeBright_delta
+        } else if type == 103 {//白牙 参数范围 0 - 100
+            beautyView.slider.value = filter.teethBright_delta
+        }
+        beautyView.valueLabel.text = String(format: "%.1f", beautyView.slider.value)
+    }
+    
+    func getBeautyDeltaValue(value: Float, type: Int) {
+        if type == 100 {//美白 参数范围：0 - 100
+            filter.white_delta = value
+        } else if type == 101 {//磨皮 参数范围 0 - 100
+            filter.skin_delta = value
+        } else if type == 102 {//亮眼 参数范围 0 - 100
+            filter.eyeBright_delta = value
+        } else if type == 103 {//白牙 参数范围 0 - 100
+            filter.teethBright_delta = value
+        }
+    }
+    
+    //MARK: Makeup Delegate
+    func changeMakeupType(type: Int) {
+        var makeupString = ""
+        if type == 0 {//眉毛 参数范围 0 - 100
+            if eyebrowType.contains(filter.makeup_eyebrow_type) {
+                let index = eyebrowType.firstIndex(of: filter.makeup_eyebrow_type)!
+                makeupString = eyebrowString[index]
+            }
+            makeupView.value = filter.makeup_eyebrow_delta
+        } else if type == 1 {//眼影 参数范围 0 - 100
+            if eyeshadowType.contains(filter.makeup_eyeshadow_type) {
+                let index = eyeshadowType.firstIndex(of: filter.makeup_eyeshadow_type)!
+                makeupString = eyeshadowString[index]
+            }
+            makeupView.value = filter.makeup_eyeshadow_delta
+        } else if type == 2 {//美瞳 参数范围 0 - 100
+            if pupilType.contains(filter.makeup_pupil_type) {
+                let index = pupilType.firstIndex(of: filter.makeup_pupil_type)!
+                makeupString = pupilString[index]
+            }
+            makeupView.value = filter.makeup_pupil_delta
+        } else if type == 3 {//腮红 参数范围 0 - 100
+            if blushType.contains(filter.makeup_blush_type) {
+                let index = blushType.firstIndex(of: filter.makeup_blush_type)!
+                makeupString = blushString[index]
+            }
+            makeupView.value = filter.makeup_blush_delta
+        } else if type == 4 {//口红 参数范围 0 - 100
+            if rougeType.contains(filter.makeup_rouge_type) {
+                let index = rougeType.firstIndex(of: filter.makeup_rouge_type)!
+                makeupString = rougeString[index]
+            }
+            makeupView.value = filter.makeup_rouge_delta
+        }
+        makeupView.makeupString = makeupString
+    }
+    
+    func getMakeupDeltaValue(value: Float, makeupType: Int, makeupString: String) {
+        if makeupType == 0 {//眉毛 参数范围：0 - 100
+            filter.makeup_eyebrow_delta = value
+            filter.makeup_eyebrow_type = changeEyebrowStringToMakeupType(name: makeupString)
+        } else if makeupType == 1 {//眼妆 参数范围：0 - 100
+            filter.makeup_eyeshadow_delta = value
+            filter.makeup_eyeshadow_type = changeEyeshadowStringToMakeupType(name: makeupString)
+        } else if makeupType == 2 {//美瞳 参数范围：0 - 100
+            filter.makeup_pupil_delta = value
+            filter.makeup_pupil_type = changePupilStringToMakeupType(name: makeupString)
+        } else if makeupType == 3 {//腮红 参数范围：0 - 100
+            filter.makeup_blush_delta = value
+            filter.makeup_blush_type = changeBlushStringToMakeupType(name: makeupString)
+        } else if makeupType == 4 {//口红 参数范围：0 - 100
+            filter.makeup_rouge_delta = value
+            filter.makeup_rouge_type = changeRougeStringToMakeupType(name: makeupString)
+        }
+    }
+    
     //MARK: Action
     @objc func closeAction() {
         dismiss(animated: true)
@@ -303,7 +387,91 @@ class BeautyFilterController: UIViewController,PFCameraDelegate,FaceReshapeDeleg
     @objc func itemButtonAction(button:UIButton) {
         currentShow = button.tag
     }
+    
+    //MARK: Private Method
+    ///将字符串(图片名)转换为对应的美妆眉毛Type
+    private func changeEyebrowStringToMakeupType(name: String) -> MakeupEyebrowType {
+        
+        if eyebrowString.contains(name) {
+            let index = eyebrowString.firstIndex(of: name)!
+            return eyebrowType[index]
+        }
+        return .eyebrow_none
+    }
+    ///将字符串(图片名)转换为对应的美妆眼妆Type
+    private func changeEyeshadowStringToMakeupType(name: String) -> MakeupEyeshadowType {
+        if eyeshadowString.contains(name) {
+            let index = eyeshadowString.firstIndex(of: name)!
+            return eyeshadowType[index]
+        }
+        return .eyeshadow_none
+    }
+    ///将字符串(图片名)转换为对应的美妆美瞳Type
+    private func changePupilStringToMakeupType(name: String) -> MakeupPupilType {
+        if pupilString.contains(name) {
+            let index = pupilString.firstIndex(of: name)!
+            return pupilType[index]
+        }
+        return .pupil_none
+    }
+    ///将字符串(图片名)转换为对应的美妆腮红Type
+    private func changeBlushStringToMakeupType(name: String) -> MakeupBlushType {
+        if blushString.contains(name) {
+            let index = blushString.firstIndex(of: name)!
+            return blushType[index]
+        }
+        return .blush_none
+    }
+    ///将字符串(图片名)转换为对应的美妆口红Type
+    private func changeRougeStringToMakeupType(name: String) -> MakeupRougeType {
+        if rougeString.contains(name) {
+            let index = rougeString.firstIndex(of: name)!
+            return rougeType[index]
+        }
+        return .rouge_none
+    }
 
+    ///将美妆眉毛Type转换为对应的字符串(图片名)
+    private func changeMakeupTypeToEyebrowString(makeupType: MakeupEyebrowType) -> String {
+        if eyebrowType.contains(makeupType) {
+            let index = eyebrowType.firstIndex(of: makeupType)!
+            return eyebrowString[index]
+        }
+        return ""
+    }
+    ///将美妆眼妆Type转换为对应的字符串(图片名)
+    private func changeMakeupTypeToEyeshadowString(makeupType: MakeupEyeshadowType) -> String {
+        if eyeshadowType.contains(makeupType) {
+            let index = eyeshadowType.firstIndex(of: makeupType)!
+            return eyeshadowString[index]
+        }
+        return ""
+    }
+    ///将美妆美瞳Type转换为对应的字符串(图片名)
+    private func changeMakeupTypeToPupilString(makeupType: MakeupPupilType) -> String {
+        if pupilType.contains(makeupType) {
+            let index = pupilType.firstIndex(of: makeupType)!
+            return pupilString[index]
+        }
+        return ""
+    }
+    ///将美妆腮红Type转换为对应的字符串(图片名)
+    private func changeMakeupTypeToBlushString(makeupType: MakeupBlushType) -> String {
+        if blushType.contains(makeupType) {
+            let index = blushType.firstIndex(of: makeupType)!
+            return blushString[index]
+        }
+        return ""
+    }
+    ///将美妆口红Type转换为对应的字符串(图片名)
+    private func changeMakeupTypeToRougeString(makeupType: MakeupRougeType) -> String {
+        if rougeType.contains(makeupType) {
+            let index = rougeType.firstIndex(of: makeupType)!
+            return rougeString[index]
+        }
+        return ""
+    }
+    
     /*
     // MARK: - Navigation
 

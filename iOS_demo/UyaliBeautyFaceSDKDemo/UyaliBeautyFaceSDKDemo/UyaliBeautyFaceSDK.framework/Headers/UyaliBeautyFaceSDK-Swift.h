@@ -252,6 +252,198 @@ using UInt = size_t;
 #endif
 
 #if defined(__OBJC__)
+/// 美妆：腮红类型
+typedef SWIFT_ENUM(NSInteger, MakeupBlushType, closed) {
+/// 无
+  MakeupBlushTypeBlush_none = 0,
+/// 无辜——奶杏色
+  MakeupBlushTypeBlush_wugu_naixingse = 1,
+/// 无辜——奶橘色
+  MakeupBlushTypeBlush_wugu_naijuse = 2,
+/// 无辜——马卡龙粉
+  MakeupBlushTypeBlush_wugu_makalongfen = 3,
+/// 无辜——蜜桃橘
+  MakeupBlushTypeBlush_wugu_mitaoju = 4,
+/// 无辜——烟熏玫瑰
+  MakeupBlushTypeBlush_wugu_yanxunmeigui = 5,
+/// 无辜——牛奶草莓
+  MakeupBlushTypeBlush_wugu_niunaicaomei = 6,
+/// 茶艺——奶杏色
+  MakeupBlushTypeBlush_chayi_naixingse = 7,
+/// 茶艺——奶橘色
+  MakeupBlushTypeBlush_chayi_naijuse = 8,
+/// 茶艺——马卡龙粉
+  MakeupBlushTypeBlush_chayi_makalongfen = 9,
+/// 茶艺——蜜桃橘
+  MakeupBlushTypeBlush_chayi_mitaoju = 10,
+/// 茶艺——烟熏玫瑰
+  MakeupBlushTypeBlush_chayi_yanxunmeigui = 11,
+/// 茶艺——牛奶草莓
+  MakeupBlushTypeBlush_chayi_niunaicaomei = 12,
+/// 初恋——奶杏色
+  MakeupBlushTypeBlush_chulian_naixingse = 13,
+/// 初恋——奶橘色
+  MakeupBlushTypeBlush_chulian_naijuse = 14,
+/// 初恋——马卡龙粉
+  MakeupBlushTypeBlush_chulian_makalongfen = 15,
+/// 初恋——蜜桃橘
+  MakeupBlushTypeBlush_chulian_mitaoju = 16,
+/// 初恋——烟熏玫瑰
+  MakeupBlushTypeBlush_chulian_yanxunmeigui = 17,
+/// 初恋——牛奶草莓
+  MakeupBlushTypeBlush_chulian_niunaicaomei = 18,
+/// 纯情——奶杏色
+  MakeupBlushTypeBlush_chunqing_naixingse = 19,
+/// 纯情——奶橘色
+  MakeupBlushTypeBlush_chunqing_naijuse = 20,
+/// 纯情——马卡龙粉
+  MakeupBlushTypeBlush_chunqing_makalongfen = 21,
+/// 纯情——蜜桃橘
+  MakeupBlushTypeBlush_chunqing_mitaoju = 22,
+/// 纯情——烟熏玫瑰
+  MakeupBlushTypeBlush_chunqing_yanxunmeigui = 23,
+/// 纯情——牛奶草莓
+  MakeupBlushTypeBlush_chunqing_niunaicaomei = 24,
+/// 奇迹——奶杏色
+  MakeupBlushTypeBlush_qiji_naixingse = 25,
+/// 奇迹——奶橘色
+  MakeupBlushTypeBlush_qiji_naijuse = 26,
+/// 奇迹——马卡龙粉
+  MakeupBlushTypeBlush_qiji_makalongfen = 27,
+/// 奇迹——蜜桃橘
+  MakeupBlushTypeBlush_qiji_mitaoju = 28,
+/// 奇迹——烟熏玫瑰
+  MakeupBlushTypeBlush_qiji_yanxunmeigui = 29,
+/// 奇迹——牛奶草莓
+  MakeupBlushTypeBlush_qiji_niunaicaomei = 30,
+/// 少女——奶杏色
+  MakeupBlushTypeBlush_shaonv_naixingse = 31,
+/// 少女——奶橘色
+  MakeupBlushTypeBlush_shaonv_naijuse = 32,
+/// 少女——马卡龙粉
+  MakeupBlushTypeBlush_shaonv_makalongfen = 33,
+/// 少女——蜜桃橘
+  MakeupBlushTypeBlush_shaonv_mitaoju = 34,
+/// 少女——烟熏玫瑰
+  MakeupBlushTypeBlush_shaonv_yanxunmeigui = 35,
+/// 少女——牛奶草莓
+  MakeupBlushTypeBlush_shaonv_niunaicaomei = 36,
+};
+
+/// 美妆：眉毛类型
+typedef SWIFT_ENUM(NSInteger, MakeupEyebrowType, closed) {
+/// 无
+  MakeupEyebrowTypeEyebrow_none = 0,
+/// 标准眉
+  MakeupEyebrowTypeEyebrow_biaozhun = 1,
+/// 蹙颦眉
+  MakeupEyebrowTypeEyebrow_cupin = 2,
+/// 罥烟眉
+  MakeupEyebrowTypeEyebrow_juanyan = 3,
+/// 流星眉
+  MakeupEyebrowTypeEyebrow_liuxing = 4,
+/// 柳叶眉
+  MakeupEyebrowTypeEyebrow_liuye = 5,
+/// 秋波眉
+  MakeupEyebrowTypeEyebrow_qiubo = 6,
+/// 弯月眉
+  MakeupEyebrowTypeEyebrow_wanyue = 7,
+/// 新月眉
+  MakeupEyebrowTypeEyebrow_xinyue = 8,
+/// 野生眉
+  MakeupEyebrowTypeEyebrow_yesheng = 9,
+/// 远山眉
+  MakeupEyebrowTypeEyebrow_yuanshan = 10,
+};
+
+/// 美妆：眼妆类型
+typedef SWIFT_ENUM(NSInteger, MakeupEyeshadowType, closed) {
+/// 无
+  MakeupEyeshadowTypeEyeshadow_none = 0,
+/// 大地色
+  MakeupEyeshadowTypeEyeshadow_dadise = 1,
+/// 复古色
+  MakeupEyeshadowTypeEyeshadow_fuguse = 2,
+/// 方糖粉
+  MakeupEyeshadowTypeEyeshadow_fangtangfen = 3,
+/// 活力橘
+  MakeupEyeshadowTypeEyeshadow_huoliju = 4,
+/// 金棕色
+  MakeupEyeshadowTypeEyeshadow_jinzongse = 5,
+/// 朋克棕
+  MakeupEyeshadowTypeEyeshadow_pengkezong = 6,
+/// 甜橙色
+  MakeupEyeshadowTypeEyeshadow_tianchengse = 7,
+/// 星光粉
+  MakeupEyeshadowTypeEyeshadow_xingguangfen = 8,
+/// 烟粉色
+  MakeupEyeshadowTypeEyeshadow_yanfense = 9,
+/// 野蔷薇色
+  MakeupEyeshadowTypeEyeshadow_yeqiangweise = 10,
+/// 元气橙
+  MakeupEyeshadowTypeEyeshadow_yuanqicheng = 11,
+};
+
+/// 美妆：美瞳类型
+typedef SWIFT_ENUM(NSInteger, MakeupPupilType, closed) {
+/// 无
+  MakeupPupilTypePupil_none = 0,
+/// 胶片棕
+  MakeupPupilTypePupil_jiaopianzong = 1,
+/// 蜜糖棕
+  MakeupPupilTypePupil_mitangzong = 2,
+/// 星夜蓝
+  MakeupPupilTypePupil_xingyelan = 3,
+/// 极昼黑
+  MakeupPupilTypePupil_jizhouhei = 4,
+/// 忽扰灰
+  MakeupPupilTypePupil_wuraohui = 5,
+/// 春日粉
+  MakeupPupilTypePupil_chunrifen = 6,
+/// 甜茶绿
+  MakeupPupilTypePupil_tianchalv = 7,
+/// 四叶草绿
+  MakeupPupilTypePupil_siyecaolv = 8,
+/// 旷野蓝
+  MakeupPupilTypePupil_kuangyelan = 9,
+/// 月球棕
+  MakeupPupilTypePupil_yueqiuzong = 10,
+/// 蔷薇粉灰
+  MakeupPupilTypePupil_qiangweifenhui = 11,
+/// 海风蓝
+  MakeupPupilTypePupil_haifenglan = 12,
+};
+
+/// 美妆：口红类型
+typedef SWIFT_ENUM(NSInteger, MakeupRougeType, closed) {
+/// 无
+  MakeupRougeTypeRouge_none = 0,
+/// 梅子色
+  MakeupRougeTypeRouge_meizise = 1,
+/// 豆沙粉
+  MakeupRougeTypeRouge_doushafen = 2,
+/// 复古色
+  MakeupRougeTypeRouge_fuguse = 3,
+/// 鬼魅红
+  MakeupRougeTypeRouge_guimeihong = 4,
+/// 浆果色
+  MakeupRougeTypeRouge_jiangguose = 5,
+/// 南瓜色
+  MakeupRougeTypeRouge_nanguase = 6,
+/// 石榴红
+  MakeupRougeTypeRouge_shiliuhong = 7,
+/// 蜜桃色
+  MakeupRougeTypeRouge_mitaose = 8,
+/// 珊瑚色
+  MakeupRougeTypeRouge_shanhuse = 9,
+/// 星光红
+  MakeupRougeTypeRouge_xingguanghong = 10,
+/// 暗夜紫
+  MakeupRougeTypeRouge_anyezi = 11,
+/// 少女粉
+  MakeupRougeTypeRouge_shaonvfen = 12,
+};
+
 
 SWIFT_CLASS("_TtC18UyaliBeautyFaceSDK21UyaliBeautyFaceEngine")
 @interface UyaliBeautyFaceEngine : NSObject
@@ -301,6 +493,26 @@ SWIFT_CLASS("_TtC18UyaliBeautyFaceSDK21UyaliBeautyFaceEngine")
 @property (nonatomic) float eyeBright_delta;
 /// 白牙，参数范围： 0.0 - 100.0
 @property (nonatomic) float teethBright_delta;
+/// 眉毛，参数范围：0.0 - 100.0
+@property (nonatomic) float makeup_eyebrow_delta;
+/// 眉毛类型
+@property (nonatomic) enum MakeupEyebrowType makeup_eyebrow_type;
+/// 眼妆，参数范围： 0.0 - 100.0
+@property (nonatomic) float makeup_eyeshadow_delta;
+/// 眼妆类型
+@property (nonatomic) enum MakeupEyeshadowType makeup_eyeshadow_type;
+/// 美瞳，参数范围：0.0 - 100.0
+@property (nonatomic) float makeup_pupil_delta;
+/// 美瞳类型
+@property (nonatomic) enum MakeupPupilType makeup_pupil_type;
+/// 腮红，参数范围：0.0 - 100.0
+@property (nonatomic) float makeup_blush_delta;
+/// 腮红类型
+@property (nonatomic) enum MakeupBlushType makeup_blush_type;
+/// 口红，参数范围：0.0 - 100.0
+@property (nonatomic) float makeup_rouge_delta;
+/// 口红类型
+@property (nonatomic) enum MakeupRougeType makeup_rouge_type;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)processWithPixelBuffer:(CVPixelBufferRef _Nonnull)pixelBuffer;
 @end
