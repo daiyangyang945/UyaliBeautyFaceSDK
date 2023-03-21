@@ -75,7 +75,6 @@ public let pupilString = [
     "pupil_tianchalv",
     "pupil_siyecaolv",
     "pupil_kuangyelan",
-    "pupil_yueqiuzong",
     "pupil_qiangweifenhui",
     "pupil_haifenglan"
 ]
@@ -90,7 +89,6 @@ public let pupilType: [MakeupPupilType] = [
     .pupil_tianchalv,
     .pupil_siyecaolv,
     .pupil_kuangyelan,
-    .pupil_yueqiuzong,
     .pupil_qiangweifenhui,
     .pupil_haifenglan
 ]
@@ -100,42 +98,36 @@ public let blushString = [
     //无辜
     "blush_wugu_naixingse",
     "blush_wugu_naijuse",
-    "blush_wugu_makalongfen",
     "blush_wugu_mitaoju",
     "blush_wugu_yanxunmeigui",
     "blush_wugu_niunaicaomei",
     //茶艺
     "blush_chayi_naixingse",
     "blush_chayi_naijuse",
-    "blush_chayi_makalongfen",
     "blush_chayi_mitaoju",
     "blush_chayi_yanxunmeigui",
     "blush_chayi_niunaicaomei",
     //初恋
     "blush_chulian_naixingse",
     "blush_chulian_naijuse",
-    "blush_chulian_makalongfen",
     "blush_chulian_mitaoju",
     "blush_chulian_yanxunmeigui",
     "blush_chulian_niunaicaomei",
     //纯情
     "blush_chunqing_naixingse",
     "blush_chunqing_naijuse",
-    "blush_chunqing_makalongfen",
     "blush_chunqing_mitaoju",
     "blush_chunqing_yanxunmeigui",
     "blush_chunqing_niunaicaomei",
     //奇迹
     "blush_qiji_naixingse",
     "blush_qiji_naijuse",
-    "blush_qiji_makalongfen",
     "blush_qiji_mitaoju",
     "blush_qiji_yanxunmeigui",
     "blush_qiji_niunaicaomei",
     //少女
     "blush_shaonv_naixingse",
     "blush_shaonv_naijuse",
-    "blush_shaonv_makalongfen",
     "blush_shaonv_mitaoju",
     "blush_shaonv_yanxunmeigui",
     "blush_shaonv_niunaicaomei"
@@ -145,7 +137,6 @@ public let blushType: [MakeupBlushType] = [
     //无辜
     .blush_wugu_naixingse,
     .blush_wugu_naijuse,
-    .blush_wugu_makalongfen,
     .blush_wugu_mitaoju,
     .blush_wugu_yanxunmeigui,
     .blush_wugu_niunaicaomei,
@@ -153,7 +144,6 @@ public let blushType: [MakeupBlushType] = [
     //茶艺
     .blush_chayi_naixingse,
     .blush_chayi_naijuse,
-    .blush_chayi_makalongfen,
     .blush_chayi_mitaoju,
     .blush_chayi_yanxunmeigui,
     .blush_chayi_niunaicaomei,
@@ -161,7 +151,6 @@ public let blushType: [MakeupBlushType] = [
     //初恋
     .blush_chulian_naixingse,
     .blush_chulian_naijuse,
-    .blush_chulian_makalongfen,
     .blush_chulian_mitaoju,
     .blush_chulian_yanxunmeigui,
     .blush_chulian_niunaicaomei,
@@ -169,7 +158,6 @@ public let blushType: [MakeupBlushType] = [
     //纯情
     .blush_chunqing_naixingse,
     .blush_chunqing_naijuse,
-    .blush_chunqing_makalongfen,
     .blush_chunqing_mitaoju,
     .blush_chunqing_yanxunmeigui,
     .blush_chunqing_niunaicaomei,
@@ -177,7 +165,6 @@ public let blushType: [MakeupBlushType] = [
     //奇迹
     .blush_qiji_naixingse,
     .blush_qiji_naijuse,
-    .blush_qiji_makalongfen,
     .blush_qiji_mitaoju,
     .blush_qiji_yanxunmeigui,
     .blush_qiji_niunaicaomei,
@@ -185,7 +172,6 @@ public let blushType: [MakeupBlushType] = [
     //少女
     .blush_shaonv_naixingse,
     .blush_shaonv_naijuse,
-    .blush_shaonv_makalongfen,
     .blush_shaonv_mitaoju,
     .blush_shaonv_yanxunmeigui,
     .blush_shaonv_niunaicaomei,

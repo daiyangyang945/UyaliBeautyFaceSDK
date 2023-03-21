@@ -260,74 +260,62 @@ typedef SWIFT_ENUM(NSInteger, MakeupBlushType, closed) {
   MakeupBlushTypeBlush_wugu_naixingse = 1,
 /// 无辜——奶橘色
   MakeupBlushTypeBlush_wugu_naijuse = 2,
-/// 无辜——马卡龙粉
-  MakeupBlushTypeBlush_wugu_makalongfen = 3,
 /// 无辜——蜜桃橘
-  MakeupBlushTypeBlush_wugu_mitaoju = 4,
+  MakeupBlushTypeBlush_wugu_mitaoju = 3,
 /// 无辜——烟熏玫瑰
-  MakeupBlushTypeBlush_wugu_yanxunmeigui = 5,
+  MakeupBlushTypeBlush_wugu_yanxunmeigui = 4,
 /// 无辜——牛奶草莓
-  MakeupBlushTypeBlush_wugu_niunaicaomei = 6,
+  MakeupBlushTypeBlush_wugu_niunaicaomei = 5,
 /// 茶艺——奶杏色
-  MakeupBlushTypeBlush_chayi_naixingse = 7,
+  MakeupBlushTypeBlush_chayi_naixingse = 6,
 /// 茶艺——奶橘色
-  MakeupBlushTypeBlush_chayi_naijuse = 8,
-/// 茶艺——马卡龙粉
-  MakeupBlushTypeBlush_chayi_makalongfen = 9,
+  MakeupBlushTypeBlush_chayi_naijuse = 7,
 /// 茶艺——蜜桃橘
-  MakeupBlushTypeBlush_chayi_mitaoju = 10,
+  MakeupBlushTypeBlush_chayi_mitaoju = 8,
 /// 茶艺——烟熏玫瑰
-  MakeupBlushTypeBlush_chayi_yanxunmeigui = 11,
+  MakeupBlushTypeBlush_chayi_yanxunmeigui = 9,
 /// 茶艺——牛奶草莓
-  MakeupBlushTypeBlush_chayi_niunaicaomei = 12,
+  MakeupBlushTypeBlush_chayi_niunaicaomei = 10,
 /// 初恋——奶杏色
-  MakeupBlushTypeBlush_chulian_naixingse = 13,
+  MakeupBlushTypeBlush_chulian_naixingse = 11,
 /// 初恋——奶橘色
-  MakeupBlushTypeBlush_chulian_naijuse = 14,
-/// 初恋——马卡龙粉
-  MakeupBlushTypeBlush_chulian_makalongfen = 15,
+  MakeupBlushTypeBlush_chulian_naijuse = 12,
 /// 初恋——蜜桃橘
-  MakeupBlushTypeBlush_chulian_mitaoju = 16,
+  MakeupBlushTypeBlush_chulian_mitaoju = 13,
 /// 初恋——烟熏玫瑰
-  MakeupBlushTypeBlush_chulian_yanxunmeigui = 17,
+  MakeupBlushTypeBlush_chulian_yanxunmeigui = 14,
 /// 初恋——牛奶草莓
-  MakeupBlushTypeBlush_chulian_niunaicaomei = 18,
+  MakeupBlushTypeBlush_chulian_niunaicaomei = 15,
 /// 纯情——奶杏色
-  MakeupBlushTypeBlush_chunqing_naixingse = 19,
+  MakeupBlushTypeBlush_chunqing_naixingse = 16,
 /// 纯情——奶橘色
-  MakeupBlushTypeBlush_chunqing_naijuse = 20,
-/// 纯情——马卡龙粉
-  MakeupBlushTypeBlush_chunqing_makalongfen = 21,
+  MakeupBlushTypeBlush_chunqing_naijuse = 17,
 /// 纯情——蜜桃橘
-  MakeupBlushTypeBlush_chunqing_mitaoju = 22,
+  MakeupBlushTypeBlush_chunqing_mitaoju = 18,
 /// 纯情——烟熏玫瑰
-  MakeupBlushTypeBlush_chunqing_yanxunmeigui = 23,
+  MakeupBlushTypeBlush_chunqing_yanxunmeigui = 19,
 /// 纯情——牛奶草莓
-  MakeupBlushTypeBlush_chunqing_niunaicaomei = 24,
+  MakeupBlushTypeBlush_chunqing_niunaicaomei = 20,
 /// 奇迹——奶杏色
-  MakeupBlushTypeBlush_qiji_naixingse = 25,
+  MakeupBlushTypeBlush_qiji_naixingse = 21,
 /// 奇迹——奶橘色
-  MakeupBlushTypeBlush_qiji_naijuse = 26,
-/// 奇迹——马卡龙粉
-  MakeupBlushTypeBlush_qiji_makalongfen = 27,
+  MakeupBlushTypeBlush_qiji_naijuse = 22,
 /// 奇迹——蜜桃橘
-  MakeupBlushTypeBlush_qiji_mitaoju = 28,
+  MakeupBlushTypeBlush_qiji_mitaoju = 23,
 /// 奇迹——烟熏玫瑰
-  MakeupBlushTypeBlush_qiji_yanxunmeigui = 29,
+  MakeupBlushTypeBlush_qiji_yanxunmeigui = 24,
 /// 奇迹——牛奶草莓
-  MakeupBlushTypeBlush_qiji_niunaicaomei = 30,
+  MakeupBlushTypeBlush_qiji_niunaicaomei = 25,
 /// 少女——奶杏色
-  MakeupBlushTypeBlush_shaonv_naixingse = 31,
+  MakeupBlushTypeBlush_shaonv_naixingse = 26,
 /// 少女——奶橘色
-  MakeupBlushTypeBlush_shaonv_naijuse = 32,
-/// 少女——马卡龙粉
-  MakeupBlushTypeBlush_shaonv_makalongfen = 33,
+  MakeupBlushTypeBlush_shaonv_naijuse = 27,
 /// 少女——蜜桃橘
-  MakeupBlushTypeBlush_shaonv_mitaoju = 34,
+  MakeupBlushTypeBlush_shaonv_mitaoju = 28,
 /// 少女——烟熏玫瑰
-  MakeupBlushTypeBlush_shaonv_yanxunmeigui = 35,
+  MakeupBlushTypeBlush_shaonv_yanxunmeigui = 29,
 /// 少女——牛奶草莓
-  MakeupBlushTypeBlush_shaonv_niunaicaomei = 36,
+  MakeupBlushTypeBlush_shaonv_niunaicaomei = 30,
 };
 
 /// 美妆：眉毛类型
@@ -406,12 +394,10 @@ typedef SWIFT_ENUM(NSInteger, MakeupPupilType, closed) {
   MakeupPupilTypePupil_siyecaolv = 8,
 /// 旷野蓝
   MakeupPupilTypePupil_kuangyelan = 9,
-/// 月球棕
-  MakeupPupilTypePupil_yueqiuzong = 10,
 /// 蔷薇粉灰
-  MakeupPupilTypePupil_qiangweifenhui = 11,
+  MakeupPupilTypePupil_qiangweifenhui = 10,
 /// 海风蓝
-  MakeupPupilTypePupil_haifenglan = 12,
+  MakeupPupilTypePupil_haifenglan = 11,
 };
 
 /// 美妆：口红类型

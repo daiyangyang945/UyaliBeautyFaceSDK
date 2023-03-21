@@ -229,7 +229,6 @@ class MakeupItemView: UIView {
         ["image":"pupil_tianchalv","name":"甜茶绿"],
         ["image":"pupil_siyecaolv","name":"四叶草绿"],
         ["image":"pupil_kuangyelan","name":"旷野蓝"],
-        ["image":"pupil_yueqiuzong","name":"月球棕"],
         ["image":"pupil_qiangweifenhui","name":"蔷薇粉灰"],
         ["image":"pupil_haifenglan","name":"海风蓝"]
     ]
@@ -238,42 +237,36 @@ class MakeupItemView: UIView {
         //无辜
         ["image":"blush_wugu_naixingse","name":"奶杏色"],
         ["image":"blush_wugu_naijuse","name":"奶橘色"],
-        ["image":"blush_wugu_makalongfen","name":"马卡龙粉"],
         ["image":"blush_wugu_mitaoju","name":"蜜桃橘"],
         ["image":"blush_wugu_yanxunmeigui","name":"烟熏玫瑰"],
         ["image":"blush_wugu_niunaicaomei","name":"牛奶草莓"],
         //茶艺
         ["image":"blush_chayi_naixingse","name":"奶杏色"],
         ["image":"blush_chayi_naijuse","name":"奶橘色"],
-        ["image":"blush_chayi_makalongfen","name":"马卡龙粉"],
         ["image":"blush_chayi_mitaoju","name":"蜜桃橘"],
         ["image":"blush_chayi_yanxunmeigui","name":"烟熏玫瑰"],
         ["image":"blush_chayi_niunaicaomei","name":"牛奶草莓"],
         //初恋
         ["image":"blush_chulian_naixingse","name":"奶杏色"],
         ["image":"blush_chulian_naijuse","name":"奶橘色"],
-        ["image":"blush_chulian_makalongfen","name":"马卡龙粉"],
         ["image":"blush_chulian_mitaoju","name":"蜜桃橘"],
         ["image":"blush_chulian_yanxunmeigui","name":"烟熏玫瑰"],
         ["image":"blush_chulian_niunaicaomei","name":"牛奶草莓"],
         //纯情
         ["image":"blush_chunqing_naixingse","name":"奶杏色"],
         ["image":"blush_chunqing_naijuse","name":"奶橘色"],
-        ["image":"blush_chunqing_makalongfen","name":"马卡龙粉"],
         ["image":"blush_chunqing_mitaoju","name":"蜜桃橘"],
         ["image":"blush_chunqing_yanxunmeigui","name":"烟熏玫瑰"],
         ["image":"blush_chunqing_niunaicaomei","name":"牛奶草莓"],
         //奇迹
         ["image":"blush_qiji_naixingse","name":"奶杏色"],
         ["image":"blush_qiji_naijuse","name":"奶橘色"],
-        ["image":"blush_qiji_makalongfen","name":"马卡龙粉"],
         ["image":"blush_qiji_mitaoju","name":"蜜桃橘"],
         ["image":"blush_qiji_yanxunmeigui","name":"烟熏玫瑰"],
         ["image":"blush_qiji_niunaicaomei","name":"牛奶草莓"],
         //少女
         ["image":"blush_shaonv_naixingse","name":"奶杏色"],
         ["image":"blush_shaonv_naijuse","name":"奶橘色"],
-        ["image":"blush_shaonv_makalongfen","name":"马卡龙粉"],
         ["image":"blush_shaonv_mitaoju","name":"蜜桃橘"],
         ["image":"blush_shaonv_yanxunmeigui","name":"烟熏玫瑰"],
         ["image":"blush_shaonv_niunaicaomei","name":"牛奶草莓"]

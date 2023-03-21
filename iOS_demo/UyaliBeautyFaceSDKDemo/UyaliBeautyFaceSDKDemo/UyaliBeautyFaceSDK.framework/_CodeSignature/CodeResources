@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/UyaliBeautyFaceSDK-Swift.h</key>
 		<data>
-		CiHcNH3RY7BBA0uc4CqFIe8qm2s=
+		VSKS84WaxvjNiPIunVHHF5sbjRk=
 		</data>
 		<key>Headers/UyaliBeautyFaceSDK.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		Y6pb3YFkgDsKP+Rv7BifnHm99ag=
+		iWhvWe0DaI+Fo4bsSFzFM70geRU=
 		</data>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		ClAd5dC4r2DUsrqY0bCLxf0Qnoo=
+		4V9j5SZX+6yY6WWKbv14gDXVeNM=
 		</data>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		YvJN2Mn8r9CnG91000XPi5PZpHc=
+		c5P365qK8Oypmr+44nPwPZ7iueQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -132,7 +132,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mO7qWkLRZDe6lxaMEflR0PoMBlWH4C9jGUpYJ6bXBcw=
+			fIbzZaqaqryZ1s6kqbjzkfA5MpFugWKIF5iaYN9dR00=
 			</data>
 		</dict>
 		<key>Headers/UyaliBeautyFaceSDK.h</key>
@@ -146,7 +146,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			k2tjZU137fXxqME69TQt0aPioDnDbyx5me46wT8rh8A=
+			UZ0Y8FCryy2QjLY0kMwFwlZff//7NvIsTuDCbPL2KnU=
 			</data>
 		</dict>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -160,14 +160,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GrKk8V9RNog3H8X6tBKGNIy1oVHWSpMjGs+bOtY7J34=
+			2d6bL+I7LESXPfnbsnPm2ZCPVl/+W+BFXXKCrqE7Pdo=
 			</data>
 		</dict>
 		<key>Modules/UyaliBeautyFaceSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dPY3aI3+L3P4Fl4uNPsBwDIEC7gGeE+y6WSyD46RJCY=
+			tOtfFZzKtiRoKVrc2TZy8eE5wTO8WtQse1ut4w7cdlw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
