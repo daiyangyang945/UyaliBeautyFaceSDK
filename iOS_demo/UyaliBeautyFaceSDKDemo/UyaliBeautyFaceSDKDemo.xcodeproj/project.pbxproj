@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60B939392A1B7F13006837E4 /* BeautyImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B939382A1B7F13006837E4 /* BeautyImageController.swift */; };
+		60B9393E2A1B85D1006837E4 /* GLKPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B9393D2A1B85D1006837E4 /* GLKPreviewView.swift */; };
+		60B939402A1B8683006837E4 /* BaseTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B9393F2A1B8683006837E4 /* BaseTools.swift */; };
 		F37AE6A62987C6B100F3311C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37AE6A52987C6B100F3311C /* AppDelegate.swift */; };
 		F37AE6A82987C6B100F3311C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37AE6A72987C6B100F3311C /* SceneDelegate.swift */; };
 		F37AE6AA2987C6B100F3311C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37AE6A92987C6B100F3311C /* ViewController.swift */; };
@@ -59,6 +62,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		60B939382A1B7F13006837E4 /* BeautyImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyImageController.swift; sourceTree = "<group>"; };
+		60B9393D2A1B85D1006837E4 /* GLKPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLKPreviewView.swift; sourceTree = "<group>"; };
+		60B9393F2A1B8683006837E4 /* BaseTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTools.swift; sourceTree = "<group>"; };
 		F37AE6A22987C6B100F3311C /* UyaliBeautyFaceSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UyaliBeautyFaceSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37AE6A52987C6B100F3311C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F37AE6A72987C6B100F3311C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,11 +146,13 @@
 				F37AE6A72987C6B100F3311C /* SceneDelegate.swift */,
 				F37AE6A92987C6B100F3311C /* ViewController.swift */,
 				F3977BA829C8B890003053ED /* BeautyFilterController.swift */,
+				60B939382A1B7F13006837E4 /* BeautyImageController.swift */,
 				F38408B7299E18D000697547 /* FaceBeautyView.swift */,
 				F37AE6D92987C75300F3311C /* FaceReshapeView.swift */,
 				F3977BA229C8B877003053ED /* FaceMakeupView.swift */,
 				F3977BA329C8B877003053ED /* MakeupItems.swift */,
 				F3977BA429C8B877003053ED /* DYYExtension.swift */,
+				60B9393F2A1B8683006837E4 /* BaseTools.swift */,
 				F37AE6E62987C7C000F3311C /* UyaliBeautyFaceSDKDemo-Bridging-Header.h */,
 				F37AE6DA2987C75300F3311C /* 相机 */,
 				F37AE6AB2987C6B100F3311C /* Main.storyboard */,
@@ -175,6 +183,7 @@
 		F37AE6DA2987C75300F3311C /* 相机 */ = {
 			isa = PBXGroup;
 			children = (
+				60B9393D2A1B85D1006837E4 /* GLKPreviewView.swift */,
 				F37AE6DB2987C75300F3311C /* PFOpenGLView.m */,
 				F37AE6DC2987C75300F3311C /* PFCamera.h */,
 				F37AE6DD2987C75300F3311C /* PFCamera.m */,
@@ -324,8 +333,11 @@
 				F37AE6E02987C75300F3311C /* FaceReshapeView.swift in Sources */,
 				F37AE6AA2987C6B100F3311C /* ViewController.swift in Sources */,
 				F37AE6A62987C6B100F3311C /* AppDelegate.swift in Sources */,
+				60B939402A1B8683006837E4 /* BaseTools.swift in Sources */,
 				F37AE6A82987C6B100F3311C /* SceneDelegate.swift in Sources */,
+				60B9393E2A1B85D1006837E4 /* GLKPreviewView.swift in Sources */,
 				F37AE6E12987C75300F3311C /* PFOpenGLView.m in Sources */,
+				60B939392A1B7F13006837E4 /* BeautyImageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,18 +514,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DWXQL5XJ47;
+				DEVELOPMENT_TEAM = 9DPXSRHZRR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UyaliBeautyFaceSDKDemo",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UyaliBeautyFaceSDKDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -536,18 +550,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DWXQL5XJ47;
+				DEVELOPMENT_TEAM = 9DPXSRHZRR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UyaliBeautyFaceSDKDemo",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UyaliBeautyFaceSDKDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
