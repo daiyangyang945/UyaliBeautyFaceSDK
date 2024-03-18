@@ -1,160 +1,107 @@
-# UyaliBeautyFaceSDK：商用级美颜SDK
+# UyaliBeautyFaceSDK：Commercial-grade beauty enhancement SDK
 
-UyaliBeautyFaceSDK是一个集美颜、美型、贴纸等各种功能于一体的堪比商用级的美颜SDK，目前暂时只完成了美型模块的基本开发，美颜与贴纸等功能将在后期慢慢补上。
+UyaliBeautyFaceSDK is a comprehensive beauty enhancement SDK comparable to commercial-grade standards, integrating various functions such as beauty enhancement, facial shaping, and stickers. Currently, only the basic development of the facial shaping module has been completed, with beauty enhancement and sticker features to be gradually added in later stages.
 
-**如果觉得这个项目可以的话，可以给个star支持一下吗，谢谢了**🙏
+**If you think this project is good, could you give it a star to show your support? Thank you!**🙏
 
-#### 注意：
 
-由于是本人自研开发，或许有尚未发现的bug，商用的话建议慎重使用
 
-## 功能规划
+**English**/[中文](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/screenshot/READEME_CN.md)
 
-- 美颜：美白、磨皮、亮眼、白牙等功能（**完成美白、磨皮、亮眼、白牙等滤镜**）
-- 美型：小头、瘦脸、大眼、额头、颧骨、眉毛等脸部微调功能（**已完成19款美型滤镜**）
-- 美妆：眉毛、眼妆、美瞳、腮红、口红等（**已初步完成规划中所有的美妆滤镜**）
-- 贴纸：规划中（未完成）
-- 适配Android（未完成）
 
-## 关于人脸关键点检测
 
-初期采用的是Face++的SDK，由于使用次数有限，现在采用了腾讯开源的TNN，缺点是只能识别一张人脸，但是目前用于自研调试是足够了，待完成大部分功能后再考虑替换。
+#### Attention:
 
-**注意：**由于开源人脸识别的关键点存在一定的抖动，所以在精细计算的美妆：**美瞳滤镜**中也存在一定的抖动
 
-## 部分功能展示
+Note: As this is self-developed, there may be undiscovered bugs. It is advisable to use with caution for commercial purposes.
 
-演示材料来自网络，若有侵权可联系daiyangyang945@126.com删除
+## 
+Function Planning
 
-#### 美型：
+- Beauty: Functions include whitening, smoothing, brightening eyes, whitening teeth, etc.（**Completed filters for whitening, smoothing, brightening eyes, and whitening teeth.**）
+- Reshape: Features for adjusting facial aspects such as small head, slim face, large eyes, forehead, cheekbones, eyebrows, etc.（**Nineteen facial enhancement filters have been completed.**）
+- Makeup: Features include eyebrows, eye makeup, contact lenses, blush, lipstick, etc.（**Preliminary planning for all cosmetic filters has been completed.**）
+- Stickers: Planned (Not Completed)
+- Adaptation for Android (Not Completed)
 
-|                             瘦脸                             |                             下巴                             |                             眼距                             |
+
+## Partial Feature Showcase
+
+Demonstration materials are sourced from the internet. If there are any copyright concerns, please contact daiyangyang945@126.com for removal.
+
+#### Reshape：
+
+|                             Face                             |                             Chin                             |                         Eye distance                         |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | ![face_thin](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/gif/face_thin.gif) | ![chin](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/gif/chin.gif) | ![eye_distance](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/gif/eye_distance.gif) |
 
-|                             瘦鼻                             |                            眉间距                            |
+|                             Nose                             |                       Eyebrow distance                       |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | ![nose_thin](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/gif/nose_thin.gif) | ![eye_distance](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/gif/eyebrow_distance.gif) |
 
 #### 美妆：
 
-|                          美妆：眉毛                          |                          美妆：口红                          |
+|                       Makeup: eyebrow                        |                       Makeup: Lipstick                       |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | ![makeup_eyebrow](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/gif/makeup_eyebrow.gif) | ![makeup_rouge](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/gif/makeup_rouge.gif) |
 
 
 
-#### 贴纸：
+#### Stickers：
 
-待续...
+To be continued...
 
-## 接入方式
+## Integration Method
 
-将demo中的UyaliBeautyFaceSDK拷入自己的项目中即可
+Simply copy the UyaliBeautyFaceSDK from the demo into your own project.
 
-#### iOS接入
+#### iOS
 
-初始化：
+Initialization：
 
 ```swift
 private let filter = UyaliBeautyFaceEngine()
 ```
 
-图像渲染处理：
+Image Rendering Processing：
 
 ```swift
 filter.process(pixelBuffer: pixelBuffer!)
 ```
 
-美型参数设置：
+Reshape Parameter Configuration：
 
 ```swift
-filter.faceThin_delta = 100 //瘦脸参数范围 0 - 100
+filter.faceThin_delta = 100 //Range of Slimming Parameters for the Face 0 - 100
 ```
 
-美颜参数设置：
+Beauty Parameter Configuration：
 
 ```swift
-filter.white_delta = 100 //美白参数范围 0 - 100
+filter.white_delta = 100 //Range of Whitening Parameters 0 - 100
 ```
 
-美妆参数设置：
+Makeup Parameter Configuration：
 
 ```swift
-//美妆滤镜需要设置两个参数，第一个为美妆数值，第二个为美妆样式
-filter.makeup_eyebrow_delta = 100 // 美妆：眉毛参数范围 0 - 100
-filter.makeup_eyebrow_type = .eyebrow_cupin //将眉毛的样式设置为蹙颦眉
+//Makeup filters require two parameters to be set: the first one is the makeup intensity value, and the second one is the makeup style.
+filter.makeup_eyebrow_delta = 100 // Makeup: Eyebrow Parameter Range 0 - 100
+filter.makeup_eyebrow_type = .eyebrow_cupin //Set the style of the eyebrows to "Cupin".
 ```
 
-如果接入时，提示
+If there are prompts during integration,
 
 > Library not loaded: @rpath/UyaliBeautyFaceSDK.framework/UyaliBeautyFaceSDK
 
-可进入**Build Phases**,点击左上角的**加号**，选择**New Copy Files Phase**,在点击创建的**Copy Files**，将**Destination**设为**Frameworks**，点击下方的**加号**，添加**UyaliBeautyFaceSDK.framework**即可
+You can enter **Build Phases**, click on the **plus sign** at the top left corner, select **New Copy Files Phase**, then click on the created **Copy Files**. Set **Destination** to **Frameworks**, then click on the **plus sign** below and add **UyaliBeautyFaceSDK.framework**.
 
 ![ios_bug](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/screenshot/ios_bug.png)
 
-#### Android接入
+#### Android
 
-待续...
+To be continued
 
-## 更新日志
-
-#### 2023-03-21
-
-**本次更新：**
-
-1、完成美妆滤镜（眉毛、眼妆、美瞳、腮红、口红）
-
-2、增加部分演示动画
-
-
-
-
-
-
-
-#### 2023-02-27
-
-**本次更新：**
-
-1、调整微调美白和磨皮的参数
-
-2、增加iOS的OC语言demo
-
-
-
-
-
-#### 2023-02-24
-
-**本次更新：**
-
-完成亮眼滤镜和白牙滤镜
-
-
-
-
-
-
-
-#### 2023-02-16
-
-**本次更新：**
-
-1、修复美型时可能产生锯齿的bug
-
-2、完成美白磨皮功能（磨皮的内存消耗略多，后期待完善）
-
-3、在调用UyaliBeautyFaceSDK时直接在当前获取的CVPixelBuffer的内存中进行渲染，不再需要生成一个新的CVPixelBuffer用于后续处理，SDK插拔更方便
-
-
-
-
-
-
-
-#### 2023-01-30
+#### 
 
 **iPhone7 测试** 
 

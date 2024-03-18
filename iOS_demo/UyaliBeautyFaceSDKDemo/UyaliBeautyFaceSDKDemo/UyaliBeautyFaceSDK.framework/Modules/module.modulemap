@@ -1,7 +1,7 @@
 framework module UyaliBeautyFaceSDK {
   umbrella header "UyaliBeautyFaceSDK.h"
-
   export *
+
   module * { export * }
 }
 

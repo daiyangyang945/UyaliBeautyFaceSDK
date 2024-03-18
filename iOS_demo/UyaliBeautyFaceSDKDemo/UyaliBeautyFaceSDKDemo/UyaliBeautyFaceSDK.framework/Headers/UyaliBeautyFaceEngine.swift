@@ -243,10 +243,107 @@ public class UyaliBeautyFaceEngine: NSObject {
         }
     }
     
+    //MARK: 常规滤镜
+    ///常规滤镜，参数范围：0.0 - 100.0
+    @objc public var filter_delta: Float = 0.0 {
+        didSet {
+            processor.filter_delta = filter_delta
+        }
+    }
+    
+    ///常规滤镜名称（暂时）
+    @objc public var filter_name: String = "normal1" {
+        didSet {
+            processor.filter_name = filter_name
+        }
+    }
+    
+    @objc public var filter_image: UIImage? {
+        didSet {
+            processor.filter_image = filter_image
+        }
+    }
+    
+    //MARK: 绿幕抠图参数（该功能仅为测试，效果不佳，不建议使用）
+    ///绿幕抠图开关
+    @objc public var isOpenGreenScreen: Bool = false {
+        didSet {
+            processor.isOpenGreenScreen = isOpenGreenScreen
+        }
+    }
+    
+    ///绿幕类型
+    @objc public var greenScreen_type: GreenScreenType = .greenScreen_green {
+        didSet {
+            processor.greenScreen_type = greenScreen_type
+        }
+    }
+    
+    ///绿幕抠图，参数范围：0.0 - 100.0
+    @objc public var greenScreen_delta: Float = 0.0 {
+        didSet {
+            processor.greenScreen_delta = greenScreen_delta
+        }
+    }
+    
+    ///填充绿幕的背景图（建议先按CVPixelBuffer的比例裁剪好尺寸）
+    @objc public var greenScreen_background = UIImage() {
+        didSet {
+            processor.greenScreen_background = greenScreen_background
+        }
+    }
+    
     @objc public override init() {}
     
     //MARK: CVPixelBuffer处理（当前仅支持RGBA格式）
     @objc public func process(pixelBuffer:CVPixelBuffer) {
         processor.filter(pixelBuffer: pixelBuffer)
+    }
+    
+    @objc public func processWithOutput(pixelBuffer: CVPixelBuffer) -> CVPixelBuffer {
+        return processor.filterWithOutput(pixelBuffer: pixelBuffer)
+    }
+    
+    //MARK: 重置所有滤镜的参数
+    @objc public func resetAllFilters() {
+        //美型参数
+        headReduce_delta = 0.0
+        faceThin_delta = 0.0
+        faceNarrow_delta = 0.0
+        faceV_delta = 0.0
+        faceSmall_delta = 0.0
+        chin_delta = 0.0
+        forehead_delta = 0.0
+        cheekbone_delta = 0.0
+        eyeBig_delta = 0.0
+        eyeDistance_delta = 0.0
+        eyeCorner_delta = 0.0
+        eyelidDown_delta = 0.0
+        noseThin_delta = 0.0
+        noseWing_delta = 0.0
+        noseLong_delta = 0.0
+        noseRoot_delta = 0.0
+        eyebrowDistance_delta = 0.0
+        eyebrowThin_delta = 0.0
+        mouth_delta = 0.0
+        //美颜参数
+        white_delta = 0.0
+        skin_delta = 0.0
+        eyeBright_delta = 0.0
+        teethBright_delta = 0.0
+        //美妆参数
+        makeup_eyebrow_delta = 0.0
+        makeup_eyebrow_type = .eyebrow_none
+        makeup_eyeshadow_delta = 0.0
+        makeup_eyeshadow_type = .eyeshadow_none
+        makeup_pupil_delta = 0.0
+        makeup_pupil_type = .pupil_none
+        makeup_blush_delta = 0.0
+        makeup_blush_type = .blush_none
+        makeup_rouge_delta = 0.0
+        makeup_rouge_type = .rouge_none
+        //滤镜参数
+        filter_delta = 0.0
+        filter_name = "normal1"
     }
 }

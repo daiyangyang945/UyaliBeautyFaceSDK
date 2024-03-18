@@ -10,6 +10,8 @@
 		60B939392A1B7F13006837E4 /* BeautyImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B939382A1B7F13006837E4 /* BeautyImageController.swift */; };
 		60B9393E2A1B85D1006837E4 /* GLKPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B9393D2A1B85D1006837E4 /* GLKPreviewView.swift */; };
 		60B939402A1B8683006837E4 /* BaseTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B9393F2A1B8683006837E4 /* BaseTools.swift */; };
+		60DDD0CB2BA8054A0090062C /* UyaliBeautyFaceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DDD0CA2BA8054A0090062C /* UyaliBeautyFaceSDK.framework */; };
+		60DDD0CC2BA805540090062C /* UyaliBeautyFaceSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60DDD0CA2BA8054A0090062C /* UyaliBeautyFaceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F37AE6A62987C6B100F3311C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37AE6A52987C6B100F3311C /* AppDelegate.swift */; };
 		F37AE6A82987C6B100F3311C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37AE6A72987C6B100F3311C /* SceneDelegate.swift */; };
 		F37AE6AA2987C6B100F3311C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37AE6A92987C6B100F3311C /* ViewController.swift */; };
@@ -27,8 +29,6 @@
 		F3977BA629C8B877003053ED /* MakeupItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3977BA329C8B877003053ED /* MakeupItems.swift */; };
 		F3977BA729C8B877003053ED /* DYYExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3977BA429C8B877003053ED /* DYYExtension.swift */; };
 		F3977BA929C8B890003053ED /* BeautyFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3977BA829C8B890003053ED /* BeautyFilterController.swift */; };
-		F3977BAC29C993CE003053ED /* UyaliBeautyFaceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3977BAB29C993CE003053ED /* UyaliBeautyFaceSDK.framework */; };
-		F3977BAD29C993D8003053ED /* UyaliBeautyFaceSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F3977BAB29C993CE003053ED /* UyaliBeautyFaceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F3977BAD29C993D8003053ED /* UyaliBeautyFaceSDK.framework in CopyFiles */,
+				60DDD0CC2BA805540090062C /* UyaliBeautyFaceSDK.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +65,7 @@
 		60B939382A1B7F13006837E4 /* BeautyImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyImageController.swift; sourceTree = "<group>"; };
 		60B9393D2A1B85D1006837E4 /* GLKPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLKPreviewView.swift; sourceTree = "<group>"; };
 		60B9393F2A1B8683006837E4 /* BaseTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTools.swift; sourceTree = "<group>"; };
+		60DDD0CA2BA8054A0090062C /* UyaliBeautyFaceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UyaliBeautyFaceSDK.framework; sourceTree = "<group>"; };
 		F37AE6A22987C6B100F3311C /* UyaliBeautyFaceSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UyaliBeautyFaceSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37AE6A52987C6B100F3311C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F37AE6A72987C6B100F3311C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +90,6 @@
 		F3977BA329C8B877003053ED /* MakeupItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeupItems.swift; sourceTree = "<group>"; };
 		F3977BA429C8B877003053ED /* DYYExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYYExtension.swift; sourceTree = "<group>"; };
 		F3977BA829C8B890003053ED /* BeautyFilterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyFilterController.swift; sourceTree = "<group>"; };
-		F3977BAB29C993CE003053ED /* UyaliBeautyFaceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UyaliBeautyFaceSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3977BAC29C993CE003053ED /* UyaliBeautyFaceSDK.framework in Frameworks */,
+				60DDD0CB2BA8054A0090062C /* UyaliBeautyFaceSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +141,7 @@
 		F37AE6A42987C6B100F3311C /* UyaliBeautyFaceSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F3977BAB29C993CE003053ED /* UyaliBeautyFaceSDK.framework */,
+				60DDD0CA2BA8054A0090062C /* UyaliBeautyFaceSDK.framework */,
 				F37AE6A52987C6B100F3311C /* AppDelegate.swift */,
 				F37AE6A72987C6B100F3311C /* SceneDelegate.swift */,
 				F37AE6A92987C6B100F3311C /* ViewController.swift */,

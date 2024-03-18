@@ -99,7 +99,8 @@ typedef void(^PFCameraRecordVidepCompleted)(NSString *videoPath);
 {
     if (!_captureSession) {
         _captureSession = [[AVCaptureSession alloc] init];
-        _captureSession.sessionPreset = AVCaptureSessionPreset1280x720;
+//        _captureSession.sessionPreset = AVCaptureSessionPreset1280x720;
+        _captureSession.sessionPreset = AVCaptureSessionPreset1920x1080;
         
         AVCaptureDeviceInput *deviceInput = self.isFrontCamera ? self.frontCameraInput:self.backCameraInput;
         

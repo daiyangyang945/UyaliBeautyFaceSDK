@@ -136,10 +136,10 @@
 		F39C3F5329ABC19000C8B236 /* 相机 */ = {
 			isa = PBXGroup;
 			children = (
+				F39C3F5729ABC19000C8B236 /* PFOpenGLView.h */,
 				F39C3F5429ABC19000C8B236 /* PFOpenGLView.m */,
 				F39C3F5529ABC19000C8B236 /* PFCamera.h */,
 				F39C3F5629ABC19000C8B236 /* PFCamera.m */,
-				F39C3F5729ABC19000C8B236 /* PFOpenGLView.h */,
 			);
 			name = "相机";
 			path = "../../UyaliBeautyFaceSDKDemo/UyaliBeautyFaceSDKDemo/相机";
@@ -518,7 +518,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DWXQL5XJ47;
+				DEVELOPMENT_TEAM = 9DPXSRHZRR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UyaliBeautyFaceSDKDemo-OC",
@@ -551,7 +551,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DWXQL5XJ47;
+				DEVELOPMENT_TEAM = 9DPXSRHZRR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UyaliBeautyFaceSDKDemo-OC",
