@@ -6,7 +6,7 @@ UyaliBeautyFaceSDK is a comprehensive beauty enhancement SDK comparable to comme
 
 
 
-**English**/[中文](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/screenshot/READEME_CN.md)
+**English**/[中文](https://github.com/daiyangyang945/UyaliBeautyFaceSDK/blob/main/screenshot/README_CN.md)
 
 
 
